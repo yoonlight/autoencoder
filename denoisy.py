@@ -1,20 +1,16 @@
-from data.mnist import load_data
-from model.Autoencoder import Autoencoder
-from model.DeepAutoencoder import DeepAutoencoder
+from data.noisy_mnist import load_data
+from model.ConvAutoencoder import ConvAutoencoder
 from util.plot_img import plot_image
 
 
-latent_dim = 32
-
-
-autoencoder = Autoencoder(latent_dim)
-autoencoder = DeepAutoencoder(latent_dim)
+autoencoder = ConvAutoencoder()
 autoencoder.compile(optimizer='adam', loss='binary_crossentropy')
+
 
 x_train, x_test = load_data()
 
 autoencoder.fit(x_train, x_train,
-                epochs=50,
+                epochs=10,
                 batch_size=128,
                 shuffle=True,
                 validation_data=(x_test, x_test))

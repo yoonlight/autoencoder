@@ -1,4 +1,6 @@
-# Keras Template
+# Autoencoder
+
+> "Autoencoding" is a data compression algorithm
 
 ## Command
 
@@ -11,5 +13,12 @@ pip install -r requirements.txt
 - start
 
 ```shell
-python
+python main.py
+python denoisy.py
+python anomaly_detect.py
 ```
+
+## Reference
+
+- [1] <https://blog.keras.io/building-autoencoders-in-keras.html>
+- [2] <https://blog.keras.io/building-autoencoders-in-keras.html>
