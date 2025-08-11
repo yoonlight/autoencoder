@@ -2,6 +2,7 @@ import pandas as pd
 import tensorflow as tf
 from sklearn.model_selection import train_test_split
 
+
 def load_data():
     # Download the dataset
     dataframe = pd.read_csv(
